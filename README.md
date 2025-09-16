@@ -101,12 +101,12 @@ python Test.py
 
 ## Results
 Numerical logs are stored in results/ as .csv files, containing:
-	- Iteration count
-	- Gradient norms
-	- Inner CG iterations
-	- Backtracking steps
-	- Success flags
-  	- Optional Weights & Biases (W&B) logging provides interactive experiment dashboards.
+- Iteration count
+- Gradient norms
+- Inner CG iterations
+- Backtracking steps
+- Success flags
+- Optional Weights & Biases (W&B) logging provides interactive experiment dashboards.
 
 ---
 
