@@ -38,7 +38,7 @@ Numerical/
 │   ├── TSolverInstruments.py     # Truncated Conjugate Gradient solver
 │
 ├── Docs/
-│   └── report.pdf                # Project report / paper
+│   └── NumOpt_Nocita_Scarpino.pdf # Project report / paper
 │
 └── results/                      # CSV logs, experiment outputs, W&B runs
 ```
@@ -124,7 +124,7 @@ Numerical logs are stored in results/ as .csv files, containing:
 ## Documentation
 
 A full project report with theory, implementation details, and experimental analysis is available here:
-- [Project Report (PDF)](Docs/report.pdf)
+- [Project Report (PDF)](Docs/NumOpt_Nocita_Scarpino.pdf)
 
 The report includes:
 - Mathematical derivations of Modified and Truncated Newton methods
