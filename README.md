@@ -18,26 +18,29 @@ Both methods are tested on benchmark functions (Rosenbrock, Powell, Broyden) and
 ```
 Numerical/
 │
-├── main_modified.py            # Entry point for the Modified Newton method
-├── main_truncated.py           # Entry point for the Truncated Newton method
-├── Test.py                     # Experiment orchestration, logging, W&B integration
-├── Testers.py                  # Test configurations and parameter grids
+├── main_modified.py              # Entry point for the Modified Newton method
+├── main_truncated.py             # Entry point for the Truncated Newton method
+├── Test.py                       # Experiment orchestration, logging, W&B integration
+├── Testers.py                    # Test configurations and parameter grids
 │
 ├── Tools/
-│   ├── Functions.py            # Benchmark functions (Rosenbrock, Powell, etc.)
-│   ├── Derivatives.py          # Exact and approximate derivatives, Hessian-vector products
-│   ├── Linesearch.py           # Armijo backtracking line search
-│   ├── Conditions.py           # Stopping criteria, PD checks, perturbation generators
+│   ├── Functions.py              # Benchmark functions
+│   ├── Derivatives.py            # Exact and approximate derivatives
+│   ├── Linesearch.py             # Armijo backtracking line search
+│   ├── Conditions.py             # Stopping criteria and checks
 │
 ├── Modified_Newton_Method/
-│   ├── ModifiedNewtonMethod.py # Implementation of the Modified Newton algorithm
-│   ├── SolverInstruments.py    # Routines for matrix corrections and incomplete Cholesky
+│   ├── ModifiedNewtonMethod.py   # Implementation of Modified Newton
+│   ├── SolverInstruments.py      # Matrix corrections, incomplete Cholesky
 │
 ├── Truncated_Newton_Method/
-│   ├── TruncatedNewtonMethod.py # Implementation of the Truncated Newton algorithm
-│   ├── TSolverInstruments.py    # Conjugate Gradient solver for inner iterations
+│   ├── TruncatedNewtonMethod.py  # Implementation of Truncated Newton
+│   ├── TSolverInstruments.py     # Truncated Conjugate Gradient solver
 │
-└── results/                     # CSV logs, experiment outputs, optional W&B tracking
+├── Docs/
+│   └── report.pdf                # Project report / paper
+│
+└── results/                      # CSV logs, experiment outputs, W&B runs
 ```
 
 ---
@@ -115,4 +118,18 @@ Numerical logs are stored in results/ as .csv files, containing:
 - Preconditioning: incomplete Cholesky may fail if matrix not SPD; add safe fallback to non-preconditioned CG.
 - Large dimensions: avoid densifying sparse Hessians in compute_gradient_hessian.
 - Seeds: ensure all seeds used in Test.py are also saved in CSV output for reproducibility.
+
+---
+
+## Documentation
+
+A full project report with theory, implementation details, and experimental analysis is available here:
+- [Project Report (PDF)](Docs/report.pdf)
+
+The report includes:
+- Mathematical derivations of Modified and Truncated Newton methods
+- Implementation details (derivatives, line search, stopping conditions)
+- Experimental design and test functions
+- Numerical results and convergence analysis
+- Discussion of limitations and possible improvements
 
