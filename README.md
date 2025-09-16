@@ -101,18 +101,18 @@ python Test.py
 
 ## Results
 Numerical logs are stored in results/ as .csv files, containing:
-	•	Iteration count
-	•	Gradient norms
-	•	Inner CG iterations
-	•	Backtracking steps
-	•	Success flags
-  •	Optional Weights & Biases (W&B) logging provides interactive experiment dashboards.
+	- Iteration count
+	- Gradient norms
+	- Inner CG iterations
+	- Backtracking steps
+	- Success flags
+  	- Optional Weights & Biases (W&B) logging provides interactive experiment dashboards.
 
 ---
 
 ## Known Issues/TODO
-•	Linesearch.Backtracking: may return alphak even if Armijo not satisfied when bt == btmax. Needs post-check and safe fallback.
-•	Preconditioning: incomplete Cholesky may fail if matrix not SPD; add safe fallback to non-preconditioned CG.
-•	Large dimensions: avoid densifying sparse Hessians in compute_gradient_hessian.
-•	Seeds: ensure all seeds used in Test.py are also saved in CSV output for reproducibility.
+- Linesearch.Backtracking: may return alphak even if Armijo not satisfied when bt == btmax. Needs post-check and safe fallback.
+- Preconditioning: incomplete Cholesky may fail if matrix not SPD; add safe fallback to non-preconditioned CG.
+- Large dimensions: avoid densifying sparse Hessians in compute_gradient_hessian.
+- Seeds: ensure all seeds used in Test.py are also saved in CSV output for reproducibility.
 
